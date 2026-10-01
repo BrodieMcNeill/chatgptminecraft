@@ -1,0 +1,38 @@
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#87c9ff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff}
+canvas{display:block;image-rendering:auto}
+#crosshair{position:fixed;z-index:5;left:50%;top:50%;transform:translate(-50%,-52%);font:700 25px/1 monospace;text-shadow:0 1px 3px #000;pointer-events:none}
+#hud{position:fixed;z-index:6;inset:12px 12px auto 12px;pointer-events:none;text-shadow:0 2px 4px #000;font-size:13px}
+#status{margin-top:5px;color:#f5f5f5}
+#hint{opacity:.82}
+#hotbar{position:fixed;z-index:7;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:4px;padding:5px;background:#111a;border:2px solid #ffffff55;border-radius:6px}
+.slot{width:52px;height:52px;background:#222c;border:2px solid #777;position:relative;display:grid;place-items:center;font-size:11px;font-weight:700}
+.slot.selected{border-color:#fff;box-shadow:0 0 0 2px #222}
+.swatch{width:31px;height:31px;border:2px solid #0007;background-size:100% 100%;image-rendering:pixelated}
+.count{position:absolute;right:3px;bottom:-1px;font-size:15px;text-shadow:1px 1px 2px #000}
+.key{position:absolute;left:3px;top:1px;font-size:10px;opacity:.72}
+#mineBar{position:fixed;z-index:8;left:50%;bottom:88px;transform:translateX(-50%);width:190px;height:10px;border:2px solid #222;background:#111a}
+#mineFill{height:100%;width:0;background:#eee}
+.hidden{display:none!important}
+#overlay{position:fixed;z-index:20;inset:0;display:grid;place-items:center;background:linear-gradient(#0007,#0003);backdrop-filter:blur(2px)}
+.panel{width:min(600px,92vw);padding:30px;text-align:center;background:#16202ddd;border:2px solid #ffffff35;border-radius:12px;box-shadow:0 20px 70px #0007}
+.panel h1{font-size:38px;margin:0 0 8px;letter-spacing:-1px}.panel p{opacity:.78}
+.panel label{display:flex;justify-content:center;align-items:center;gap:9px;margin:10px auto;font-size:14px}
+input{width:210px;padding:10px 12px;border:1px solid #ffffff33;border-radius:5px;background:#0e151eee;color:white;outline:none}
+.onlineRow{display:flex;justify-content:center;gap:10px;margin-top:12px}
+button{margin-top:12px;padding:11px 22px;border:0;border-radius:6px;background:#4d8550;color:#fff;font-size:15px;font-weight:800;cursor:pointer}
+button:active{transform:translateY(1px)}
+button.primary{background:#5da653;box-shadow:0 4px 0 #315c2d;font-size:17px}
+button.close{position:absolute;right:12px;top:8px;margin:0;padding:2px 8px;background:transparent;font-size:28px}
+#roomLabel input{font-family:monospace}
+#roomInfo{margin-top:9px;min-height:24px;font-size:13px;color:#cfe6ff;overflow-wrap:anywhere}
+.panel small{display:block;margin-top:15px;opacity:.58}
+#crafting{position:fixed;z-index:18;inset:0;display:grid;place-items:center;background:#0008}
+.craftPanel{position:relative;width:min(720px,94vw);max-height:85vh;overflow:auto;padding:26px;background:#1a1a1aea;border:3px solid #555;box-shadow:0 18px 80px #000b}
+.craftPanel h2{margin:0;font-size:30px}.craftPanel p{opacity:.7}
+#recipes{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}
+.recipe{padding:14px;background:#2b2b2b;border:2px solid #555;text-align:left}
+.recipe strong{display:block;margin-bottom:7px}.recipe .need{font-size:12px;opacity:.75;margin-bottom:9px}
+.recipe button{margin:0;width:100%}
+.recipe button[disabled]{opacity:.35;cursor:not-allowed}
+.remoteLabel{color:#fff;background:#000a;padding:2px 5px;border-radius:3px;font:11px system-ui,sans-serif}

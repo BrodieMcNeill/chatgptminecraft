@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#87c9ff">
+  <title>Voxel Survival Online</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="crosshair">+</div>
+  <div id="hud">
+    <div id="hint">Click the world · WASD · Space jump · Shift sprint · LMB mine · RMB place · C craft · 1–9 select</div>
+    <div id="status"></div>
+  </div>
+  <div id="hotbar"></div>
+  <div id="mineBar" class="hidden"><div id="mineFill"></div></div>
+
+  <div id="overlay">
+    <div class="panel">
+      <h1>Voxel Survival Online</h1>
+      <p>Plains • crafting • mobs • multiplayer • 64×64 textures</p>
+      <label>Player name <input id="nameInput" maxlength="14" value="Player"></label>
+      <div class="onlineRow">
+        <button id="hostBtn">Host World</button>
+        <button id="joinBtn">Join World</button>
+      </div>
+      <label id="roomLabel" class="hidden">Host code <input id="roomInput" placeholder="Paste host code"></label>
+      <button id="enterBtn" class="primary">Enter World</button>
+      <div id="roomInfo"></div>
+      <small>Hosting uses peer-to-peer WebRTC via PeerJS, so GitHub Pages can serve the game without a separate game server.</small>
+    </div>
+  </div>
+
+  <div id="crafting" class="hidden">
+    <div class="craftPanel">
+      <button id="closeCraft" class="close">×</button>
+      <h2>Crafting</h2>
+      <p>Recipes are one-click; ingredients come from your inventory.</p>
+      <div id="recipes"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
