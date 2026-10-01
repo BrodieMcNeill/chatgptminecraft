@@ -1,0 +1,19 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#87c9ff;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff}canvas{display:block}
+#crosshair{position:fixed;z-index:5;left:50%;top:50%;transform:translate(-50%,-52%);font:700 25px/1 monospace;text-shadow:0 1px 3px #000;pointer-events:none}
+#hud{position:fixed;z-index:6;inset:12px 12px auto 12px;pointer-events:none;text-shadow:0 2px 4px #000;font-size:13px}
+#status{margin-top:6px;color:#f5f5f5}
+#hint{opacity:.85}
+#hotbar{position:fixed;z-index:7;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:4px;padding:5px;background:#1118;border:2px solid #ffffff55;border-radius:5px}
+.slot{width:52px;height:52px;background:#222b;border:2px solid #777;position:relative;display:grid;place-items:center;font-size:11px;font-weight:700}
+.slot.selected{border-color:#fff;box-shadow:0 0 0 2px #222}
+.swatch{width:29px;height:29px;border:2px solid #0006;box-shadow:inset 0 0 0 1px #fff2}
+.count{position:absolute;right:3px;bottom:0;font-size:15px;text-shadow:1px 1px 2px #000}
+.key{position:absolute;left:3px;top:1px;font-size:10px;opacity:.7}
+#mineBar{position:fixed;z-index:8;left:50%;bottom:88px;transform:translateX(-50%);width:190px;height:10px;border:2px solid #222;background:#111a}
+#mineFill{height:100%;width:0;background:#eee}
+.hidden{display:none!important}
+#overlay{position:fixed;z-index:20;inset:0;display:grid;place-items:center;background:linear-gradient(#0007,#0003);backdrop-filter:blur(2px)}
+.panel{width:min(560px,90vw);padding:34px;text-align:center;background:#16202ddd;border:2px solid #ffffff35;border-radius:12px;box-shadow:0 20px 70px #0007}
+.panel h1{font-size:42px;margin:0 0 10px;letter-spacing:-1px}.panel p{opacity:.8}.panel small{display:block;margin-top:15px;opacity:.65}
+button{margin-top:18px;padding:13px 30px;border:0;border-radius:6px;background:#5da653;color:#fff;font-size:17px;font-weight:800;cursor:pointer;box-shadow:0 4px 0 #315c2d}
+button:active{transform:translateY(2px);box-shadow:0 2px 0 #315c2d}
